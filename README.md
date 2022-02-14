@@ -1,2 +1,1 @@
 "# computacao-paralela" 
-"# comp-paralela" 
