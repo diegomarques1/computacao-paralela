@@ -33,10 +33,11 @@ Caso não consiga acessar o link, é possível realizar o processo manualmente:
 
 - Para esse método, é preciso ter instalado o Git e o GCC no seu computador (comando -> sudo apt install ..., sendo ... git ou gcc).
 - Caso queira, clonar o repositório atual do github em um certo diretório de sua máquina.
-- Se esse for o caso, utilizar o comando 'git remote add origin' ou 'git remote add github' + o link para o repositório atual.
+- Se esse for o caso, é possível usar o comando git clone https://github.com/diegomarques1/computacao-paralela.
 - De qualquer modo, após ter o arquivo baixado (seja pela sincronização ou por outra maneira), abrir o terminal na pasta em que este se encontra.
 - Em seguida, utilizar os comandos: 
 -> gcc nomedoarquivo.c -o nomedoarquivo
 -> ./nomedoarquivo
+- Por fim, é possível ver a execução do programa, algo evidenciado na imagem a seguir:
 
 ![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/lab01/Execu%C3%A7%C3%A3o%20-%20Lab01a.png)
