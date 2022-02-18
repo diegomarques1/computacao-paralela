@@ -36,7 +36,7 @@ Caso não consiga acessar o link, é possível realizar o processo manualmente:
 - Se esse for o caso, é possível usar o comando git clone https://github.com/diegomarques1/computacao-paralela.
 - De qualquer modo, após ter o arquivo baixado (seja pela sincronização ou por outra maneira), abrir o terminal na pasta em que este se encontra.
 - Em seguida, utilizar os comandos:
-- 
+
 -> gcc nomedoarquivo.c -o nomedoarquivo
 
 -> ./nomedoarquivo
