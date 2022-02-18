@@ -22,5 +22,5 @@ int main()
   else if (MA >= 6) nota = 'C';
   else if (MA >= 4) nota = 'D';
   else nota = 'E';
-  printf("Nota: %c", nota);
+  printf("Nota: %c \n", nota);
 }

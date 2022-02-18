@@ -10,7 +10,7 @@ int main()
   printf("Digite o tamanho da matriz quadrada: ");
   scanf("%i", &tam);
   int m = 0, n = 0;
-  int mQuadrada[tam][tam],menor = mQuadrada[m][n], linhaMenor = m;
+  int mQuadrada[tam][tam], linhaMenor = m;
   while (m < tam)
   {
     while (n < tam)
@@ -23,6 +23,7 @@ int main()
     m++;
   }
   m = 0, n = 0;
+  int menor = mQuadrada[m][n];
   while (m < tam)
     {
       while (n < tam)
@@ -37,6 +38,6 @@ int main()
       n = 0;
       m++;
     }
-  printf("A linha que contém o menor número da matriz é: %i", linhaMenor + 1);
+  printf("A linha que contém o menor número da matriz é: %i \n", linhaMenor + 1);
   return 0;
 }
