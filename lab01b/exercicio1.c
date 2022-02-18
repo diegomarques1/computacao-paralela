@@ -1,5 +1,5 @@
 // Diego Souza Lima Marques - TIA: 32039921
-// Lucas de Camargo Gonçalves - TIA:
+// Lucas de Camargo Gonçalves - TIA: 32074964
 // Lab01b - Exercício 01
 
 #include <stdio.h>
