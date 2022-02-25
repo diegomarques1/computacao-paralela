@@ -21,57 +21,57 @@ No curso, o objetivo será compilar por meio do GCC em um Linux.
 
 - exercicio1.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex01.png?raw=true)
 
 - exercicio2.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex02.png?raw=true)
 
 - exercicio3.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex03.png?raw=true)
 
 - exercicio4.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex04.png?raw=true)
 
 - exercicio5.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex05.png?raw=true)
 
 - exercicio6.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex06.png?raw=true)
 
 - exercicio7.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex07.png?raw=true)
 
 - exercicio8.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex08.png?raw=true)
 
 - exercicio9.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex09.png?raw=true)
 
 - exercicio10.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex10.png?raw=true)
 
 - exercicio11.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex11.png?raw=true)
 
 - exercicio12.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex12.png?raw=true)
 
 - exercicio13.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex13.png?raw=true)
 
 - exercicio14.c:
 
-[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+![Screenshot](/lab01b/printscreens-execucao/execucao-ex14.png?raw=true)
 
