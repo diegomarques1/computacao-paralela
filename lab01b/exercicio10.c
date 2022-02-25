@@ -3,6 +3,7 @@
 // Lab01b - Exercício 10
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void imprimeMatriz(int **matriz, int m, int n)
 {
