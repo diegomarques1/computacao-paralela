@@ -21,29 +21,57 @@ No curso, o objetivo será compilar por meio do GCC em um Linux.
 
 - exercicio1.c:
 
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+
 - exercicio2.c:
+
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
 
 - exercicio3.c:
 
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+
 - exercicio4.c:
+
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
 
 - exercicio5.c:
 
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+
 - exercicio6.c:
+
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
 
 - exercicio7.c:
 
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+
 - exercicio8.c:
+
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
 
 - exercicio9.c:
 
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+
 - exercicio10.c:
+
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
 
 - exercicio11.c:
 
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+
 - exercicio12.c:
+
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
 
 - exercicio13.c:
 
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
+
 - exercicio14.c:
+
+[!image](/lab01b/printscreens-execucao/execucao-ex01.png)
 
