@@ -26,5 +26,6 @@ No curso, o objetivo será compilar por meio do GCC em um Linux.
 - Acima, fizemos os testes com os fatoriais de 1 a 6.
 - Para esse exercício, nós pensamos em criar um processo para cada iteração do fatorial.
 - Cada processo filho é criado no laço por meio do comando fork().
-- O fatorial é calculado normalmente, sendo exibido apenas pelo último processo. Isso porque o último processo filho é o único que vai ter childpid = 0, pois os outros pais acabam tendo como chilpid o ID do filho criado, enquanto o último processo não teve filho algum.
+- O fatorial é calculado normalmente, sendo exibido apenas pelo último processo. Isso porque o último processo filho é o único que vai ter childpid = 0, pois os outros pais acabam tendo como childpid o ID do filho criado, enquanto o último processo não teve filho algum por sair do laço for.
 - A chamada wait foi utilizada por meio do material para consulta fornecido.
+- O fatorial foi calculado em cima do valor de 'i', que é atribuído antes do fork() para que o valor seja atualizado para cada processo filho.
