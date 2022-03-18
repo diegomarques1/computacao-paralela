@@ -15,6 +15,8 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 
 -> ./nomequalquer
 
+- Além disso, é preciso ter feito o download do arquivo entrada.txt para servir como entrada ao programa.
+- Baixar o arquivo saida.txt é opcional, visto que o programa ou sobrescreve um arquivo já existente, ou cria um arquivo do zero.
 - Por fim, é possível executar o programa.
 - Logo abaixo, nesse arquivo README.md, estarão prints com a execução do exercício proposto para este laboratório.
 - Observação: todas as execuções foram realizadas no computador do Diego, visto que já conseguiu instalar o Linux dual boot. 
