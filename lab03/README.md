@@ -23,14 +23,14 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 
 ![Screenshot](/lab03/print-execucao-01-ex03.png?raw=true)
 
-- Execução 01 - Impressão do vetor não-ordenado
+- Impressão do vetor não ordenado
 
 ![Screenshot](/lab03/print-execucao-02-ex03.png?raw=true)
 
-- Execução 02 - Impressão do vetor ordenado por altura
+- Em seguida, impressão do vetor ordenado por altura
 
 - A lógica do programa é a seguinte:
-- 
+
 -> Utiliza-se a função fopen para abrir o arquivo em questão (entrada.txt);
 
 -> Utilizando um while até o EOF (final do arquivo), cada linha é atribuída a um atributo de uma struct;
