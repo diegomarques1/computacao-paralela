@@ -1,0 +1,40 @@
+Nome: Arthur
+Idade: 18
+Altura: 1.55
+
+Nome: Maria
+Idade: 15
+Altura: 1.60
+
+Nome: Joana
+Idade: 40
+Altura: 1.60
+
+Nome: Miriam
+Idade: 85
+Altura: 1.62
+
+Nome: Lucas
+Idade: 20
+Altura: 1.69
+
+Nome: Abel
+Idade: 23
+Altura: 1.70
+
+Nome: Valentina
+Idade: 30
+Altura: 1.70
+
+Nome: Diego
+Idade: 20
+Altura: 1.75
+
+Nome: Joao
+Idade: 21
+Altura: 1.80
+
+Nome: Rafael
+Idade: 37
+Altura: 1.84
+
