@@ -31,11 +31,19 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 
 - A lógica do programa é a seguinte:
 -> Utiliza-se a função fopen para abrir o arquivo em questão (entrada.txt);
+
 -> Utilizando um while até o EOF (final do arquivo), cada linha é atribuída a um atributo de uma struct;
+
 -> Essa struct PESSOA armazena o nome, a idade e a altura de cada pessoa descrita no arquivo de entrada;
+
 -> Cada pessoa é armazenada em um vetor e esse vetor é ordenado pela altura por meio da função qsort();
+
 -> A função qsort() ordena o vetor de pessoas 'Povo', que tem 10 elementos, a partir da função cmp();
+
 -> A função cmp foi implementada no programa de acordo com a lógica vista na documentação;
+
 -> Essa função compara ambas as alturas e retorna algum valor inteiro que indica como ordenar a partir do Quicksort;
+
 -> Por fim, o vetor é ordenado e colocado em um outro arquivo chamado saida.txt (se não existir, cria um arquivo com tal nome).
+
 -> O programa também imprime na tela o vetor antes e depois da ordenação.
