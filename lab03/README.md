@@ -30,6 +30,7 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 - Execução 02 - Impressão do vetor ordenado por altura
 
 - A lógica do programa é a seguinte:
+- 
 -> Utiliza-se a função fopen para abrir o arquivo em questão (entrada.txt);
 
 -> Utilizando um while até o EOF (final do arquivo), cada linha é atribuída a um atributo de uma struct;
