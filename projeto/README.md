@@ -39,7 +39,7 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 - Ao pesquisar sobre na Internet, vimos respostas bem contrapostas. Enfim, entendemos que a velocidade entre recursão e iteração depende do caso e do problema a ser resolvido, obviamente.
 - Logo, fizemos ambas as funções e testamos alguns valores de entrada. Segue abaixo um print de ambas as funções pensadas:
 
-![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v1/print-ideia-inicial-projeto.png?raw=true)
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v1/print-ideia-inicial.png?raw=true)
 
 - Testamos com algumas entradas e, para o valor 1000000, a versão recursiva deu erro de segmentação, enquanto a versão iterativa conseguiu ser executada. Seguem prints de exemplos abaixo:
 
