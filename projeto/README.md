@@ -29,7 +29,7 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 - Logo abaixo, neste arquivo README.md, estarão registradas decisões tomadas durante o projeto, com prints evidenciando testes realizados, melhorias, hipótestes, etc.
 - O arquivo README.md será atualizado a partir das novas versões do projeto. Na teoria, espera-se que haverão atualizações a cada semana - de acordo com as atividades de laboratório.
 
-02/05/2022: v1
+## 02/05/2022: v1
 
 -> Construção da versão 1 (v1) + grafo de dependências (DAG).
 
@@ -39,28 +39,28 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 - Ao pesquisar sobre na Internet, vimos respostas bem contrapostas. Enfim, entendemos que a velocidade entre recursão e iteração depende do caso e do problema a ser resolvido, obviamente.
 - Logo, fizemos ambas as funções e testamos alguns valores de entrada. Segue abaixo um print de ambas as funções pensadas:
 
-![Screenshot](?raw=true)
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v1/print-ideia-inicial-projeto.png?raw=true)
 
 - Testamos com algumas entradas e, para o valor 1000000, a versão recursiva deu erro de segmentação, enquanto a versão iterativa conseguiu ser executada. Seguem prints de exemplos abaixo:
 
 -> Teste com 100 e 10000, respectivamente:
 
-![Screenshot](?raw=true)
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v1/print-teste-01.png?raw=true)
 
 -> Teste com 2 e 50000, respectivamente:
 
-![Screenshot](?raw=true)
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v1/print-teste-02.png?raw=true)
 
 -> Teste com 1000000 (erro para versão recursiva):
 
-![Screenshot](?raw=true)
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v1/print-teste-03.png?raw=true)
 
 - Sendo assim, decidimos criar a versão inicial (v1) a partir da função iterativa. 
 - Também é importante ter em mente que a v1 não tem qualquer aplicação de paralelismo por nossa parte, sendo um programa serial para resolver o problema inicialmente.
 - Neste diretório, o arquivo da versão 1 pode ser consultado: projeto-v1.c
 - Segue abaixo print com a execução do que foi solicitado na atividade: ln(10)
 
-![Screenshot](?raw=true)
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v1/print-execucao-ln10-v1.png?raw=true)
 
 ### Grafo de dependências - DAG
 
@@ -68,5 +68,5 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 - Por exemplo: para calcular ln(10), precisamos ter calculado ln(9), que também precisa de ln(8), e assim por diante - considerando que ln(10) é uma soma infinitesimal.
 - Segue abaixo o DAG construído:
 
-![Screenshot](?raw=true)
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/dag-grafo-v1.png?raw=true)
 
