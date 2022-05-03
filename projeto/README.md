@@ -58,9 +58,12 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 - Sendo assim, decidimos criar a versão inicial (v1) a partir da função iterativa. 
 - Também é importante ter em mente que a v1 não tem qualquer aplicação de paralelismo por nossa parte, sendo um programa serial para resolver o problema inicialmente.
 - Neste diretório, o arquivo da versão 1 pode ser consultado: projeto-v1.c
+- A lógica implementada foi utilizar um laço para somar continuamente cada 1/i, de i = 1 até i = t.
 - Segue abaixo print com a execução do que foi solicitado na atividade: ln(10)
 
 ![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v1/print-execucao-ln10-v1.png?raw=true)
+
+- Nesse caso, com a versão atual, o resultado obtido foi 2.928968.
 
 ### Grafo de dependências - DAG
 
