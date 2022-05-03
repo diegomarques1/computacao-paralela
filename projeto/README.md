@@ -29,7 +29,7 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 - Logo abaixo, neste arquivo README.md, estarão registradas decisões tomadas durante o projeto, com prints evidenciando testes realizados, melhorias, hipótestes, etc.
 - O arquivo README.md será atualizado a partir das novas versões do projeto. Na teoria, espera-se que haverão atualizações a cada semana - de acordo com as atividades de laboratório.
 
-## 02/05/2022: v1
+## 02/05/2022 - Versão 1
 
 -> Construção da versão 1 (v1) + grafo de dependências (DAG).
 
