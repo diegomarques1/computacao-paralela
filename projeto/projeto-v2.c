@@ -50,7 +50,7 @@ int main(int argc, char* argv[])
 }
 
 // Função passada para pthread_create, que calcula de 
-// 1..500 em uma thread e de 501..1000 na outra
+// 1/1..1/500 em uma thread e de 1/501..1/1000 na outra
 
 void *SerieTaylor(void* rank)
 {
