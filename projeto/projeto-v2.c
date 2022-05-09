@@ -49,7 +49,7 @@ int main(int argc, char* argv[])
   return 0;
 }
 
-// Função passada para pthread_create, que calcula de 
+// Função passada para pthread_create, que calcula a soma de 
 // 1/1..1/500 em uma thread e de 1/501..1/1000 na outra
 
 void *SerieTaylor(void* rank)
