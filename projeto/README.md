@@ -16,6 +16,7 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 -> ./nomequalquer
 
 - Para a v1, não é preciso digitar qualquer valor de entrada após ./nomequalquer.
+- Para a v2, não é preciso digitar qualquer valor de entrada após ./nomequalquer.
 - Por fim, é possível executar o programa.
 
 ### - Considerações sobre o projeto
@@ -73,3 +74,37 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 
 ![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/dag-grafo-v1.png?raw=true)
 
+## 09/05/2022 - Versão 2
+
+-> Construção da versão 2 para ln(1000) utilizando pthreads + comparação de speedup entre versão serial e paralela + atualização do log.txt
+
+### Código - v2
+
+- A primeira ideia foi criar uma thread para cada parte da soma. Ou seja, uma thread faria 1/1 e armazenaria, outra faria 1/2, outra faria 1/3, e por aí vai.
+- Essa metodologia se mostrou inviável, com tempos maiores e maiores de execução, além de falha de segmentação com valor razoavelmente baixo.
+- Logo, analogamente ao que foi visto em aula no laboratório 02, pensamos em uma solução que utilizava duas threads.
+- Ao testar soluções com menos threads, o tempo de execução diminuiu, então achamos que faz sentido a interpretação.
+- Definimos o número de threads dentro do arquivo ao invés de utilizar o strtol e pegar o valor da linha de comando.
+- Isso foi feito para garantir o funcionamento do programa. Por exemplo, se o usuário desejasse criar 7 threads, é provável que seria somado algum(ns) valor a mais ou a menos, porque 1000/7 não é um número inteiro.
+- Outro ponto relevante é que, a partir desta versão, estaremos utilizando o comando 'time' do próprio Linux para medir tempo de execução.
+- Motivo: biblioteca time.h, clock() -> chamadas bloqueantes, fazendo com que atividades em paralelo sejam forçadas em um modelo serial.
+- O arquivo log.txt foi atualizado com a nova metodologia, tanto para v1 quanto v2.
+- Abaixo, segue print comprovando a execução para ln(1000):
+
+![Screenshot](?raw=true)
+
+- Outros exemplos, mudando manualmente o valor de ln dentro do código:
+
+![Screenshot](?raw=true)
+
+![Screenshot](?raw=true)
+
+- Observação: os resultados de ln() testados deram iguais ao da v1 - e o tempo de execução foi extremamente similar.
+
+### Speedup - V2
+
+- No geral, considerando ln(x), o tempo de execução foi um pouco mais rápido para menores valores de x para a v1, e um pouco mais rápido para a v2 em valores maiores de x.
+- Cálculos de speedup:
+-> V1: serial
+
+-> V2: paralela
