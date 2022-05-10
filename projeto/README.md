@@ -96,8 +96,8 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 ![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v2/print-thread-impacto.png?raw=true)
 
 - Após a realização de alguns testes, foi possível perceber que, em alguns casos, principalmente para valores grandes, as threads acabavam sendo iniciadas praticamente ao mesmo tempo.
-- Em outras palavras, uma thread começava o cálculo de 1..500, e a outra começava ao mesmo tempo, sem acontecer o término da outra a tempo.
-- Quando isso acontecia, a atualização da variável de início e fim não eram computadas a tempo.
+- Em outras palavras, de acordo com a nossa implementação inicial para essa v2, uma thread começava o cálculo de 1..500, e a outra começava ao mesmo tempo.
+- Quando isso acontecia, as atualizações das variáveis de início e fim não eram computadas a tempo.
 - Ou seja, o começo de ambas as threads era o mesmo, ou então o final, ou uma mistura de combinações que faziam o valor variar.
 - Para resolve esse problema, como a v2 foi proposta por nós com a utilização de 2 threads, fizemos um if para diferenciar ambas, e garantir a inicialização correta.
 - Isso foi importante para evitar a limitação do início de uma thread a partir do fim da outra.
