@@ -118,7 +118,18 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 
 - No geral, considerando ln(x), o tempo de execução foi um pouco mais rápido para menores valores de x para a v1, e um pouco mais rápido para a v2 em valores maiores de x.
 - Tendo isso em vista, os tempos foram extremamente parecidos.
-- Cálculos de speedup:
--> V1: serial
+- Qualquer teste realizado pode ser consultado no arquivo log.txt. Eles dão um comparativo interessante em relação ao tempo de execução.
+- Cálculos de speedup considerando a lei de Amdahl, utilizada quando o tamanho do problema é fixo:
+Sp = 1/f
 
--> V2: paralela
+- f seria a fração serial. Seu cálculo foi feito contando 1 ciclo de clock por instrução no código.
+
+-> Para ln(1000), temos:
+
+f é composto por:
+1 (linha 13, store) +
+1000 iterações do loop * 3 instruções (store, + e /) =
+3000 + 1 = 3001
+Sp = 1/3001 ≃ 0,0003
+
+- Observação: não garantimos que o cálculo acima utilizou a lógica correta, mas tentamos ser coerentes com o que foi visto na lista de exercícios.
