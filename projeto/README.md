@@ -83,21 +83,34 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 - A primeira ideia foi criar uma thread para cada parte da soma. Ou seja, uma thread faria 1/1 e armazenaria, outra faria 1/2, outra faria 1/3, e por aí vai.
 - Essa metodologia se mostrou inviável, com tempos maiores e maiores de execução, além de falha de segmentação com valor razoavelmente baixo.
 - Logo, analogamente ao que foi visto em aula no laboratório 02, pensamos em uma solução que utilizava duas threads.
-- Ao testar soluções com menos threads, o tempo de execução diminuiu, então achamos que faz sentido a interpretação.
-- Definimos o número de threads dentro do arquivo ao invés de utilizar o strtol e pegar o valor da linha de comando.
+- Ao testar soluções com menos threads, o tempo de execução diminuiu, então achamos que a interpretação é minimamente coerente.
+- Definimos o número de threads dentro do arquivo - ao invés de utilizar o strtol e pegar o valor da linha de comando.
 - Isso foi feito para garantir o funcionamento do programa. Por exemplo, se o usuário desejasse criar 7 threads, é provável que seria somado algum(ns) valor a mais ou a menos, porque 1000/7 não é um número inteiro.
+
+
 - Outro ponto relevante é que, a partir desta versão, estaremos utilizando o comando 'time' do próprio Linux para medir tempo de execução.
 - Motivo: biblioteca time.h, clock() -> chamadas bloqueantes, fazendo com que atividades em paralelo sejam forçadas em um modelo serial.
-- O arquivo log.txt foi atualizado com a nova metodologia, tanto para v1 quanto v2.
+- Um último fator a se mencionar é que, pelas threads serem chamadas não-bloqueantes, elas podem executar sem esperar o término das anteriores. 
+- Dito isso, algumas situações foram comuns no desenvolvimento da v2, como essa, em uma das tentativas iniciais:
+
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v2/print-thread-impacto.png?raw=true)
+
+- Após a realização de alguns testes, foi possível perceber que, em alguns casos, principalmente para valores grandes, as threads acabavam sendo iniciadas praticamente ao mesmo tempo.
+- Em outras palavras, uma thread começava o cálculo de 1..500, e a outra começava ao mesmo tempo, sem acontecer o término da outra a tempo.
+- Quando isso acontecia, a atualização da variável de início e fim não eram computadas a tempo.
+- Ou seja, o começo de ambas as threads era o mesmo, ou então o final, ou uma mistura de combinações que faziam o valor variar.
+- Para resolve esse problema, como a v2 foi proposta por nós com a utilização de 2 threads, fizemos um if para diferenciar ambas, e garantir a inicialização correta.
+- Isso foi importante para evitar a limitação do início de uma thread a partir do fim da outra.
+
+
+- Por fim, o arquivo log.txt foi atualizado com a nova medição de tempo de execução, tanto para v1 quanto v2.
 - Abaixo, segue print comprovando a execução para ln(1000):
 
-![Screenshot](?raw=true)
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v2/print-execucao-final-v2.png?raw=true)
 
 - Outros exemplos, mudando manualmente o valor de ln dentro do código:
 
-![Screenshot](?raw=true)
-
-![Screenshot](?raw=true)
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v2/print-exemplos-execucao-v2.png?raw=true)
 
 - Observação: os resultados de ln() testados deram iguais ao da v1 - e o tempo de execução foi extremamente similar.
 
