@@ -1,7 +1,7 @@
 Arquivo para armazenar o histórico de testes realizados para o projeto.
 Ambiente de execução: computador do Diego.
 
-02/05/2022: v1
+-> 02/05/2022: v1
 
 - Arquivo utilizado para verificar o tempo de execução de v1:
 teste-v1.c
@@ -32,3 +32,73 @@ Tempo de execução = 47.026000ms
 
 ln(1000000000) = 21.300482
 Tempo de execução = 4208.253000ms (~4 segundos)
+
+-> 09/05/2022: v1
+
+- Refacção dos testes de v1 por meio do comando 'time' no Linux:
+tempo em segundos e com apenas três casas decimais
+
+ln(10) = 2.928968
+Tempo de execução ≃ 0.001s
+
+ln(100) = 5.187378
+Tempo de execução ≃ 0.001s
+
+ln(500) = 6.792823
+Tempo de execução ≃ 0.001s
+
+ln(1000) = 7.485471
+Tempo de execução ≃ 0.001s
+
+ln(10000) = 9.787606
+Tempo de execução ≃ 0.001s
+
+ln(50000) = 11.397004
+Tempo de execução ≃ 0.002s
+
+ln(1000000) = 14.392727
+Tempo de execução ≃ 0.009s
+
+ln(10000000) = 16.695311
+Tempo de execução ≃ 0.051s
+
+ln(1000000000) = 21.300482
+Tempo de execução ≃ 4.382s
+
+-> 09/05/2022: v2
+
+- A partir dessa versão, foi utilizado o comando 'time' no Linux:
+tempo em segundos e com apenas três casas decimais
+
+(Por conta da aproximação fornecida, o tempo de execução 
+foi igual a 0.002s de ln(10) até ln(50000), mesmo que 
+provavelmente existe alguma diferença bem pequena)
+
+ln(10) = 2.928968
+Tempo de execução ≃ 0.002s
+
+ln(100) = 5.187378
+Tempo de execução ≃ 0.002s
+
+ln(500) = 6.792823
+Tempo de execução ≃ 0.002s
+
+ln(1000) = 7.485471
+Tempo de execução ≃ 0.002s
+
+ln(10000) = 9.787606
+Tempo de execução ≃ 0.002s
+
+ln(50000) = 11.397004
+Tempo de execução ≃ 0.003s
+
+ln(1000000) = 14.392727
+Tempo de execução ≃ 0.011s
+
+ln(10000000) = 16.695311
+Tempo de execução ≃ 0.047s
+
+ln(1000000000) = 21.300482
+Tempo de execução ≃ 4.297s
+
+
