@@ -27,7 +27,7 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 - Também deixaremos um arquivo .txt com anotações sobre testes realizados: log.txt
 - Este arquivo foi feito baseado na utilização da biblioteca time.h no código para cada versão e estará disponível no repositório.
 - Além disso, colocaremos as versões atualizadas do código-fonte conforme as semanas forem passando. Como desejamos ter um registro evidente das versões, deixaremos cada versão (v1..vn) no repositório.
-- Logo abaixo, neste arquivo README.md, estarão registradas decisões tomadas durante o projeto, com prints evidenciando testes realizados, melhorias, hipótestes, etc.
+- Logo abaixo, neste arquivo README.md, estarão registradas decisões tomadas durante o projeto, com prints evidenciando testes realizados, melhorias, hipóteses, etc.
 - O arquivo README.md será atualizado a partir das novas versões do projeto. Na teoria, espera-se que haverão atualizações a cada semana - de acordo com as atividades de laboratório.
 
 ## 02/05/2022 - Versão 1
