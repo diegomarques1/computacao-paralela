@@ -112,11 +112,12 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 
 ![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v2/print-exemplos-execucao-v2.png?raw=true)
 
-- Observação: os resultados de ln() testados deram iguais ao da v1 - e o tempo de execução foi extremamente similar.
+- Observação: os resultados de ln() testados deram iguais ao da v1 (com mesma precisão). O tempo de execução também foi extremamente similar.
 
 ### Speedup - V2
 
 - No geral, considerando ln(x), o tempo de execução foi um pouco mais rápido para menores valores de x para a v1, e um pouco mais rápido para a v2 em valores maiores de x.
+- Tendo isso em vista, os tempos foram extremamente parecidos.
 - Cálculos de speedup:
 -> V1: serial
 
