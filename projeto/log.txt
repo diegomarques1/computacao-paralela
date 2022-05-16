@@ -65,7 +65,7 @@ Tempo de execução ≃ 0.051s
 ln(1000000000) = 21.300482
 Tempo de execução ≃ 4.382s
 
--> 09/05/2022: v2
+-> 09/05/2022: v2_1
 
 - A partir dessa versão, foi utilizado o comando 'time' no Linux:
 tempo em segundos e com apenas três casas decimais
@@ -101,4 +101,4 @@ Tempo de execução ≃ 0.047s
 ln(1000000000) = 21.300482
 Tempo de execução ≃ 4.297s
 
-
+-> 16/05/2022:
