@@ -78,6 +78,7 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 ## 09/05/2022 - Versão 2
 
 -> Construção da versão 2 para ln(1000) utilizando pthreads + comparação de speedup entre versão serial e paralela + atualização do log.txt
+-> Atenção ao compilar no GCC (não se esquecer do -lpthread ao final)
 
 ### Código - v2
 
@@ -129,17 +130,21 @@ Sp = Ts/Tp (tempo serial / tempo paralelo)
 -> Para ln(1000), temos:
 
 Tempo serial ≃ 0,001s
+
 Tempo paralelo ≃ 0,001s
 
 Sp = 0,001/0,001 ≃ 1 
+
 Speedup = 1 (sem ganho de speedup para valores pequenos)
 
 -> Para ln(1000000000), temos:
 
 Tempo serial ≃ 4,483s
+
 Tempo paralelo ≃ 4,416s
 
 Sp = 4,483/4,416 ≃ 1,0152
+
 Speedup ≃ 1,0152
 
 ## 16/05/2022 - Versão 3
