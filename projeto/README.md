@@ -82,6 +82,7 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 
 ### Código - v2
 
+- Arquivo: projeto-v2_1.c
 - A primeira ideia foi criar uma thread para cada parte da soma. Ou seja, uma thread faria 1/1 e armazenaria, outra faria 1/2, outra faria 1/3, e por aí vai.
 - Essa metodologia se mostrou inviável, com tempos maiores e maiores de execução, além de falha de segmentação com valor razoavelmente baixo.
 - Logo, analogamente ao que foi visto em aula no laboratório 02 (dois pipes), pensamos em uma solução que utilizava duas threads.
@@ -115,6 +116,8 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 ![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v2/print-exemplos-execucao-v2.png?raw=true)
 
 - Observação: os resultados de ln() testados deram iguais ao da v1 (com mesma precisão). O tempo de execução também foi extremamente similar.
+
+- Outro arquivo: projeto-v2_2.c - sem o uso de struct, menos preciso
 
 ### Speedup - V2 - Atualizado em 16/05/2022
 
