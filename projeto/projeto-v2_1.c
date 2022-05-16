@@ -11,7 +11,6 @@
 struct lista_par
 {
   double inicio;
-  double meio;
   double fim;
   double soma;
   long thread;
