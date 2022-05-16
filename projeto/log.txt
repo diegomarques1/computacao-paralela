@@ -67,6 +67,8 @@ Tempo de execução ≃ 4.382s
 
 -> 09/05/2022: v2_1
 
+(atualizado em 16/05/2022)
+
 - A partir dessa versão, foi utilizado o comando 'time' no Linux:
 tempo em segundos e com apenas três casas decimais
 
@@ -75,19 +77,19 @@ foi igual a 0.002s de ln(10) até ln(50000), mesmo que
 provavelmente existe alguma diferença bem pequena)
 
 ln(10) = 2.928968
-Tempo de execução ≃ 0.002s
+Tempo de execução ≃ 0.001s
 
 ln(100) = 5.187378
-Tempo de execução ≃ 0.002s
+Tempo de execução ≃ 0.001s
 
 ln(500) = 6.792823
-Tempo de execução ≃ 0.002s
+Tempo de execução ≃ 0.001s
 
 ln(1000) = 7.485471
-Tempo de execução ≃ 0.002s
+Tempo de execução ≃ 0.001s
 
 ln(10000) = 9.787606
-Tempo de execução ≃ 0.002s
+Tempo de execução ≃ 0.001s
 
 ln(50000) = 11.397004
 Tempo de execução ≃ 0.003s
