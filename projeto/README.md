@@ -16,6 +16,7 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 -> ./nomequalquer
 
 - Para a v1, não é preciso digitar qualquer valor de entrada após ./nomequalquer.
+- Para a v2, o primeiro comando é gcc nomedoarquivo.c -o nomequalquer -lpthread
 - Para a v2, não é preciso digitar qualquer valor de entrada após ./nomequalquer.
 - Por fim, é possível executar o programa.
 
@@ -114,24 +115,31 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 
 - Observação: os resultados de ln() testados deram iguais ao da v1 (com mesma precisão). O tempo de execução também foi extremamente similar.
 
-### Speedup - V2
+### Speedup - V2 - Atualizado em 16/05/2022
 
 - No geral, considerando ln(x), o tempo de execução foi um pouco mais rápido para menores valores de x para a v1, e um pouco mais rápido para a v2 em valores maiores de x.
 - Tendo isso em vista, os tempos foram extremamente parecidos entre as versões (v1 e v2).
 - Qualquer teste realizado pode ser consultado no arquivo log.txt. Eles dão um comparativo interessante em relação ao tempo de execução.
 - Cálculo de speedup considerando a lei de Amdahl, utilizada quando o tamanho do problema é fixo:
 
-Sp = 1/f
+Sp = Ts/Tp (tempo serial / tempo paralelo)
 
-- f seria a fração serial. Seu cálculo foi feito contando 1 ciclo de clock por instrução no código.
+- Comando utilizado: 'time' do próprio Linux. O resultado pode diferir um pouco em relação ao log da v1 em log.txt por conta disso.
 
 -> Para ln(1000), temos:
 
-f é composto por:
-1 (linha 13, store) +
-1000 iterações do loop * 3 instruções (store, + e /) =
-3000 + 1 = 3001;
+Tempo serial ≃ 0,001s
+Tempo paralelo ≃ 0,001s
 
-Sp = 1/3001 ≃ 0,0003
+Sp = 0,001/0,001 ≃ 1 
+Speedup = 1 (sem ganho de speedup para valores pequenos)
 
-- Observação: não garantimos que o cálculo acima utilizou a lógica correta, mas tentamos ser coerentes com o que foi visto na lista de exercícios 01.
+-> Para ln(1000000000), temos:
+
+Tempo serial ≃ 4,483s
+Tempo paralelo ≃ 4,416s
+
+Sp = 4,483/4,416 ≃ 1,0152
+Speedup ≃ 1,0152
+
+## 16/05/2022 - Versão 3
