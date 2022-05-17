@@ -105,3 +105,57 @@ Tempo de execução ≃ 4.297s
 
 -> 16/05/2022: v3
 
+Comando para teste: 'time', do Linux.
+Arquivo: projeto-v3.c (sem a diretiva omp critical)
+
+Aspecto observado: os valores de ln mudam com constância, 
+devido à variável ser acessada simultaneamente.
+Logo, colocamos como valor de ln o valor com maior ocorrência.
+
+ln(10) = 2.540371
+Tempo de execução ≃ 0.005s-0.007s
+
+ln(100) = 5.187378
+Tempo de execução ≃ 0.005s-0.007s
+
+ln(1000) = 7.485471
+Tempo de execução ≃ 0.006s-0.008s
+
+ln(10000) = 9.787606
+Tempo de execução ≃ 0.006s-0.008s
+
+ln(1000000) = 14.392727
+Tempo de execução ≃ 0.005s-0.009s
+
+ln(10000000) = 16.695311
+Tempo de execução ≃ 0.016s-0.020s
+
+ln(1000000000) = 21.300482
+Tempo de execução ≃ 1.424s-1.427s (ganho considerável)
+
+V3 - Diretiva OMP CRITICAL
+Arquivo: projeto-v3-critical.c (com a diretiva omp critical)
+
+Aspecto observado: valor de ln consistente, mas tempo de exec.
+um pouco mais lento para valores razoavelmente grandes.
+
+ln(10) = 2.540371
+Tempo de execução ≃ 0.001s-0.003s
+
+ln(100) = 5.187378
+Tempo de execução ≃ 0.001s-0.003s
+
+ln(1000) = 7.485471
+Tempo de execução ≃ 0.004s-0.006s
+
+ln(10000) = 9.787606
+Tempo de execução ≃ 0.005s-0.006s
+
+ln(1000000) = 14.392727
+Tempo de execução ≃ 0.006s-0.011s
+
+ln(10000000) = 16.695311
+Tempo de execução ≃ 0.023s-0.025s
+
+ln(1000000000) = 21.300482
+Tempo de execução ≃ 1.437s-1.453s (ganho considerável)
