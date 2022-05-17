@@ -15,10 +15,16 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 
 -> ./nomequalquer
 
+### V1
 - Para a v1, não é preciso digitar qualquer valor de entrada após ./nomequalquer.
+
+### V2
 - Para a v2, o primeiro comando é gcc nomedoarquivo.c -o nomequalquer -lpthread
 - Para a v2, não é preciso digitar qualquer valor de entrada após ./nomequalquer.
-- Por fim, é possível executar o programa.
+
+### V3
+- Para a v3, o primeiro comando é gcc nomedoarquivo.c -o nomequalquer -fopenmp
+- Para a v3, não é preciso digitar qualquer valor de entrada após ./nomequalquer.
 
 ### - Considerações sobre o projeto
 
@@ -132,22 +138,73 @@ Sp = Ts/Tp (tempo serial / tempo paralelo)
 
 -> Para ln(1000), temos:
 
-Tempo serial ≃ 0,001s
+Tempo serial ≃ 0.001s
 
-Tempo paralelo ≃ 0,001s
+Tempo paralelo ≃ 0.001s
 
-Sp = 0,001/0,001 ≃ 1 
+Sp = 0.001/0.001 ≃ 1 
 
 Speedup = 1 (sem ganho de speedup para valores pequenos)
 
 -> Para ln(1000000000), temos:
 
-Tempo serial ≃ 4,483s
+Tempo serial ≃ 4.483s
 
-Tempo paralelo ≃ 4,416s
+Tempo paralelo ≃ 4.416s
 
-Sp = 4,483/4.297 ≃ 1,0433
+Sp = 4.483/4.297 ≃ 1.0433
 
-Speedup ≃ 1,0433
+Speedup ≃ 1.0433
 
-## 16/05/2022 - Versão 3
+## 16/05/2022 - Versão 3 - Condição de corrida
+
+-> Construção da versão 3 para ln(1000) utilizando OpenMP + análise de Speedup entre versão serial e paralela + atualização do log.txt + criação do arquivo critical.md para explicação sobre região crítica.
+-> Atenção ao compilar no GCC (não se esquecer do -fopenmp ao final)
+
+- Arquivos da versão 3: 
+- projeto-v3.c (sem uso da diretiva omp critical)
+- projeto-v3-critical.c (com uso da diretiva omp critical)
+
+
+- De acordo com feedback visto em aula, inicialmente, mudamos algumas coisas em relação ao código da versão 2.
+- Alguns testes realizados foram atualizados e inseridos no arquivo log.txt.
+- As diretivas do OpenMP estão explicadas no arquivo critical.md.
+- A função SerieTaylor pode ser utilizada para threads com valores divisores de x, em que x está em ln(x).
+- Por exemplo, é possível alterar o thread_count para valores como 2 e 5 (1000 é divisível por ambos).
+- De acordo com o ambiente de execução (máquina do Diego), contendo um processador com 4 núcleos, na teoria, o ideal é utilizar 4 threads, algo que mudamos da nossa versão 2 (usava 2 threads).
+- Essa decisão foi pautada no feedback visto em aula e em testes realizados com 2, 4 e 5 threads.
+- Com 2 threads, o resultado foi mais lento do que com 4 ou 5 threads.
+- Entre 4 e 5, os resultados em teste foram bastante similares, então optamos por 4 threads para seguir a lógica da teoria.
+- A partir do que vimos nos testes registrados no log.txt, com valores mais altos, a execução se tornou razoavelmente mais rápida com OpenMP em relação às versões 1 e 2.
+- Para isso, faremos a análise do Speedup para a v3 também:
+
+Sp = Ts/Tp (tempo serial / tempo paralelo)
+
+-> Para ln(1000000000) e v3 sem critical, temos:
+
+Tempo serial (v1) ≃ 4.483s
+
+Tempo paralelo (v3) ≃ 1.427s
+
+Sp = 4.483/1.427 ≃ 3.1416
+
+Speedup ≃ 3.1416
+
+-> Para ln(1000000000) e v3 com critical, temos:
+
+Tempo serial (v1) ≃ 4.483s
+
+Tempo paralelo (v3) ≃ 1.453s
+
+Sp = 4.483/1.453 ≃ 3.085
+
+Speedup ≃ 3.085
+
+- Além disso, o que percebemos em relação à utilização da diretiva omp critical foi o seguinte:
+- Para valores mais altos, usar a diretiva tornou a execução geralmente um pouquinho mais lenta, de acordo com testes em log.txt.
+- No entanto, a diretiva garante o resultado correto para ln(), algo que não aconteceu em 100% das vezes para a versão sem a diretiva.
+- Podemos ver abaixo um print comprovando a execução para um valor relativamente grande:
+
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v3/print-comparacao-v3.png?raw=true)
+
+- Observação: os valores de teste não estão iguais ao do log.txt porque cada teste resulta em um tempo de execução minimamente diferente, principalmente para valores mais altos, em que a diferença entre tempos de execução é mais palpável.
