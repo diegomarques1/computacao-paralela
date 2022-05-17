@@ -9,22 +9,25 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 - Caso queira, clonar o repositório atual do github em um certo diretório de sua máquina.
 - Se esse for o caso, é possível usar o comando git clone https://github.com/diegomarques1/computacao-paralela.
 - De qualquer modo, após ter o arquivo baixado (seja pela sincronização ou por outra maneira), abrir o terminal na pasta em que este se encontra.
-- Em seguida, utilizar os comandos:
+- Em seguida, no geral, utilizar os comandos:
 
 -> gcc nomedoarquivo.c -o nomequalquer
 
 -> ./nomequalquer
 
+- Mais especificamente:
+
 ### V1
-- Para a v1, não é preciso digitar qualquer valor de entrada após ./nomequalquer.
+- Para a v1, o primeiro comando é igual ao que está dito acima.
+- Não é preciso digitar qualquer valor de entrada após ./nomequalquer 
 
 ### V2
 - Para a v2, o primeiro comando é gcc nomedoarquivo.c -o nomequalquer -lpthread
-- Para a v2, não é preciso digitar qualquer valor de entrada após ./nomequalquer.
+- Não é preciso digitar qualquer valor de entrada após ./nomequalquer.
 
 ### V3
 - Para a v3, o primeiro comando é gcc nomedoarquivo.c -o nomequalquer -fopenmp
-- Para a v3, não é preciso digitar qualquer valor de entrada após ./nomequalquer.
+- Não é preciso digitar qualquer valor de entrada após ./nomequalquer.
 
 ### - Considerações sobre o projeto
 
@@ -84,11 +87,12 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 ## 09/05/2022 - Versão 2
 
 -> Construção da versão 2 para ln(1000) utilizando pthreads + comparação de speedup entre versão serial e paralela + atualização do log.txt
+
 -> Atenção ao compilar no GCC (não se esquecer do -lpthread ao final)
 
 ### Código - v2
 
-- Arquivo: projeto-v2_1.c
+- Arquivo principal: projeto-v2_1.c
 - A primeira ideia foi criar uma thread para cada parte da soma. Ou seja, uma thread faria 1/1 e armazenaria, outra faria 1/2, outra faria 1/3, e por aí vai.
 - Essa metodologia se mostrou inviável, com tempos maiores e maiores de execução, além de falha de segmentação com valor razoavelmente baixo.
 - Logo, analogamente ao que foi visto em aula no laboratório 02 (dois pipes), pensamos em uma solução que utilizava duas threads.
@@ -123,7 +127,7 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 
 - Observação: os resultados de ln() testados deram iguais ao da v1 (com mesma precisão). O tempo de execução também foi extremamente similar.
 
-- Outro arquivo: projeto-v2_2.c - sem o uso de struct, menos preciso
+- Outro arquivo secundário: projeto-v2_2.c - sem o uso de struct, menos preciso
 
 ### Speedup - V2 - Atualizado em 16/05/2022
 
@@ -159,6 +163,7 @@ Speedup ≃ 1.0433
 ## 16/05/2022 - Versão 3 - Condição de corrida
 
 -> Construção da versão 3 para ln(1000) utilizando OpenMP + análise de Speedup entre versão serial e paralela + atualização do log.txt + criação do arquivo critical.md para explicação sobre região crítica.
+
 -> Atenção ao compilar no GCC (não se esquecer do -fopenmp ao final)
 
 - Arquivos da versão 3: 
@@ -200,6 +205,7 @@ Sp = 4.483/1.453 ≃ 3.085
 
 Speedup ≃ 3.085
 
+- Logo, é possível perceber que o ganho de performance, utilizando OpenMP, foi bastante significativo.
 - Além disso, o que percebemos em relação à utilização da diretiva omp critical foi o seguinte:
 - Para valores mais altos, usar a diretiva tornou a execução geralmente um pouquinho mais lenta, de acordo com testes em log.txt.
 - No entanto, a diretiva garante o resultado correto para ln(), algo que não aconteceu em 100% das vezes para a versão sem a diretiva.
