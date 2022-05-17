@@ -128,7 +128,7 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 
 Sp = Ts/Tp (tempo serial / tempo paralelo)
 
-- Comando utilizado: 'time' do próprio Linux. O resultado pode diferir um pouco em relação ao log da v1 em log.txt por conta disso.
+- Comando utilizado: 'time' do próprio Linux. O resultado pode diferir um pouco em relação ao primeiro log da v1 em log.txt por conta disso.
 
 -> Para ln(1000), temos:
 
@@ -146,8 +146,8 @@ Tempo serial ≃ 4,483s
 
 Tempo paralelo ≃ 4,416s
 
-Sp = 4,483/4,416 ≃ 1,0152
+Sp = 4,483/4.297 ≃ 1,0433
 
-Speedup ≃ 1,0152
+Speedup ≃ 1,0433
 
 ## 16/05/2022 - Versão 3
