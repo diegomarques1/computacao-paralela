@@ -63,7 +63,7 @@ ln(10000000) = 16.695311
 Tempo de execução ≃ 0.051s
 
 ln(1000000000) = 21.300482
-Tempo de execução ≃ 4.382s
+Tempo de execução ≃ 4.483s
 
 -> 09/05/2022: v2_1
 
@@ -74,7 +74,7 @@ tempo em segundos e com apenas três casas decimais
 
 (Por conta da aproximação fornecida, o tempo de execução 
 foi igual a 0.002s de ln(10) até ln(50000), mesmo que 
-provavelmente existe alguma diferença bem pequena)
+provavelmente exista alguma diferença bem pequena)
 
 ln(10) = 2.928968
 Tempo de execução ≃ 0.001s
@@ -103,4 +103,5 @@ Tempo de execução ≃ 0.047s
 ln(1000000000) = 21.300482
 Tempo de execução ≃ 4.297s
 
--> 16/05/2022:
+-> 16/05/2022: v3
+
