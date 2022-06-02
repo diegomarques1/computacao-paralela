@@ -133,7 +133,7 @@ Tempo de execução ≃ 0.016s-0.020s
 ln(1000000000) = 21.300482
 Tempo de execução ≃ 1.424s-1.427s (ganho considerável)
 
-V3 - Diretiva OMP CRITICAL
+V3 - Diretiva OMP CRITICAL (Versão Final)
 Arquivo: projeto-v3-critical.c (com a diretiva omp critical)
 
 Aspecto observado: valor de ln consistente, mas tempo de exec.
