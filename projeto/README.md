@@ -29,6 +29,10 @@ Porém, no curso, a ideia é compilar os arquivos por meio do GCC e em um sistem
 - Para a v3, o primeiro comando é gcc nomedoarquivo.c -o nomequalquer -fopenmp
 - Não é preciso digitar qualquer valor de entrada após ./nomequalquer.
 
+### Versão final
+- Para a versão final, o primeiro comando é gcc nomedoarquivo.c -o nomequalquer -fopenmp
+- Não é preciso digitar qualquer valor de entrada após ./nomequalquer.
+
 ### - Considerações sobre o projeto
 
 - Linguagem escolhida: C (vide orientações para o compilador GCC).
@@ -214,3 +218,38 @@ Speedup ≃ 3.085
 ![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/v3/print-comparacao-v3.png?raw=true)
 
 - Observação: os valores de teste não estão iguais ao do log.txt porque cada teste resulta em um tempo de execução minimamente diferente, principalmente para valores mais altos, em que a diferença entre tempos de execução é mais palpável.
+
+## 02/06/2022 - Versão final
+
+- O código da versão final está no arquivo projeto-final.c.
+- Atenção ao compilar no GCC (não se esquecer do -fopenmp ao final)
+
+- A versão final continuou sendo a versão com OpenMP utilizando o #pragma omp critical para a variável de soma.
+- Os melhores resultados foram obtidos utilizando OpenMP.
+- Utilizando pthreads, o custo de sincronização de threads + a falta de uma soma parcial para cada thread tornaram o ganho de performance quase nulo.
+- Utilizando OpenMP, tivemos o melhor resultado (menor tempo de execução para o maior valor de ln).
+- Não conseguimos criar um código satisfatório em CUDA até a data de entrega, então decidimos continuar com OpenMP.
+- Tentamos utilizar reduction em OpenMP, mas funcionou melhor com o pradgma de parallel antes da chamada da função.
+- Tentamos também utilizar reduction e parallel for, mas acabou ficando uns 3 segundos mais lento.
+- Outro empecilho é que o nosso for utilizava 'double d', e aí precisamos colocar um 'int d' e fazer conversão para double na conta da série de Taylor. Isso provavelmente tornou a alocação um pouco mais lenta.
+- Segue abaixo exemplo do uso de reduction e sua pior performance:
+
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/vfinal/print-parallelfor.png?raw=true)
+
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/vfinal/print-execucao-parallelfor.png?raw=true)
+
+- Para ln(1000000000) e v3 com critical, tivemos o menor resultado com:
+
+Tempo serial (v1) ≃ 4.483s
+
+Tempo paralelo (final) ≃ 1.136s
+
+Sp = 4.483/1.136 ≃ 3.946
+
+- Speedup ≃ 3.946 (igual/similar à versão 3, porque obviamente pode variar milésimos)
+
+- Valor de ln(1000000000) obtido = 21.300482
+
+- Abaixo, segue print comprovando o resultado:
+
+![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/vfinal/print-execucao-final.png?raw=true)
