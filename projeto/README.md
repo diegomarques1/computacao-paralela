@@ -238,7 +238,11 @@ Speedup ≃ 3.085
 
 ![Screenshot](https://github.com/diegomarques1/computacao-paralela/blob/main/projeto/prints/vfinal/print-execucao-parallelfor.png?raw=true)
 
-- Para ln(1000000000) e v3 com critical, tivemos o menor resultado com:
+- Logo, essa abordagem foi descartada.
+
+### Resultados finais
+
+- Para ln(1000000000) e versão final (OpenMP), tivemos o menor resultado com:
 
 Tempo serial (v1) ≃ 4.483s
 
